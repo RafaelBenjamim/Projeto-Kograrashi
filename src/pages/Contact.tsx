@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Camera, ArrowUpRight, Map, MessageCircle } from 'lucide-react';
 import PageTransition from '../components/pageTransition';
 
-import FotoEstudio from '../assets/Estudio.jpeg';
+import FotoEstudio from '../assets/estudio.jpeg';
 
 export default function Contact() {
   // Link exato do Google Maps com o endereço do estúdio
