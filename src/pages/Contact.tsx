@@ -1,13 +1,10 @@
 import { motion } from 'framer-motion';
-import { MapPin, Camera, ArrowUpRight, Map, MessageCircle } from 'lucide-react';
+import { MapPin, Camera, ArrowUpRight, MessageCircle } from 'lucide-react';
 import PageTransition from '../components/pageTransition';
 
 import FotoEstudio from '../assets/estudio.jpeg';
 
 export default function Contact() {
-  // Link exato do Google Maps com o endereço do estúdio
-  const mapsLink = "https://maps.google.com/?q=Rua+Tomazinho+Rezende,+440,+Uberlândia,+MG";
-
   return (
     <PageTransition className="min-h-screen pt-48 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto flex flex-col justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
@@ -28,27 +25,19 @@ export default function Contact() {
           </motion.h2>
 
           <div className="space-y-12">
-            {/* Bloco de Endereço Principal */}
+            {/* Bloco de Endereço Principal (Estúdio Privado) */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
               <div className="flex items-start gap-4 mb-4">
                 <MapPin className="text-neutral-500 mt-1" size={20} strokeWidth={1.5} />
                 <div>
-                  <h3 className="text-lg font-serif text-neutral-200 mb-2">Kogarashi Studio</h3>
+                  <h3 className="text-lg font-serif text-neutral-200 mb-2">Studio Privado</h3>
                   <p className="text-neutral-400 text-sm leading-relaxed mb-4">
-                    Rua Tomazinho Rezende, 440<br />
+                    Atendimento exclusivo com hora marcada.<br />
                     Uberlândia, Minas Gerais
                   </p>
-                  
-                  {/* BOTÃO DO GOOGLE MAPS */}
-                  <a 
-                    href={mapsLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-xs tracking-widest uppercase border border-neutral-700 px-5 py-2.5 hover:bg-white hover:text-black transition-all group"
-                  >
-                    <Map size={14} className="group-hover:text-black" />
-                    Abrir no Mapa
-                  </a>
+                  <p className="text-neutral-500 text-xs italic">
+                    * O endereço completo é enviado após a confirmação do agendamento.
+                  </p>
                 </div>
               </div>
             </motion.div>

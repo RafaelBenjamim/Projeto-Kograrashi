@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PageTransition from '../components/pageTransition';
 
 // 1. IMPORTAÇÃO DAS 6 IMAGENS DA HOME
-import HeroImg from '../assets/hero.jpg';
+import HeroImg from '../assets/hero3.jpg';
 import Detalhe1 from '../assets/Detalhe1.jpg';
 import Detalhe2 from '../assets/Detalhe2.jpg';
 import Portfolio1 from '../assets/Portfolio1.jpg';
@@ -25,14 +25,30 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/30 via-transparent to-[#050505]" />
         </div>
 
+        {/* TEXTO VERTICAL JAPONÊS (KOGARASHI) - ESTILO EDITORIAL */}
+        <div 
+          className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 hidden md:block opacity-[0.05] pointer-events-none select-none z-0"
+          style={{ writingMode: 'vertical-rl' }}
+        >
+          <span className="text-white text-8xl lg:text-[10rem] font-serif tracking-[0.3em]">
+            木枯らし
+          </span>
+        </div>
+
         <div className="relative z-10 flex flex-col items-center text-center px-6 mt-20">
-          <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-neutral-500 text-xs tracking-[0.3em] uppercase mb-6">
+          {/* TOQUE DO CARIMBO HANKO (VERMELHO ESCURO) */}
+          <motion.span 
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} 
+            className="text-[#8B2323] font-bold text-xs tracking-[0.3em] uppercase mb-6"
+          >
             Uberlândia — MG
           </motion.span>
+          
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-8 tracking-tighter">
             Kogarashi <br />
             <span className="italic font-light text-neutral-400">Studio</span>
           </motion.h1>
+          
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }}>
             <Link to="/projetos" className="group flex items-center gap-4 text-xs tracking-widest uppercase text-white border-b border-neutral-700 pb-2 hover:border-white transition-all">
               Projetos Disponíveis <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />

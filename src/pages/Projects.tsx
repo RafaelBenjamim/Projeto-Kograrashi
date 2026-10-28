@@ -3,18 +3,31 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import PageTransition from '../components/pageTransition';
 
-// 1. IMPORTAÇÃO DAS 11 IMAGENS (Respeitando as maiúsculas e minúsculas exatas!)
-import Proj1 from '../assets/Projetos1.jpeg';
-import Proj2 from '../assets/Projetos2.jpeg';
-import Proj3 from '../assets/Projetos3.jpeg';
-import Proj4 from '../assets/Projetos4.jpeg';
-import Proj5 from '../assets/projetos5.jpeg'; // Este começa com 'p' minúsculo
-import Proj6 from '../assets/Projetos6.jpeg';
-import Proj7 from '../assets/Projetos7.jpeg';
-import Proj8 from '../assets/Projetos8.jpeg';
-import Proj9 from '../assets/Projetos9.jpeg';
-import Proj10 from '../assets/Projetos10.jpeg';
-import Proj11 from '../assets/Projetos11.jpeg';
+// 1. IMPORTAÇÃO DOS 24 PROJETOS (Verifique se a extensão no seu PC é .jpg, .jpeg ou .png)
+import Proj1 from '../assets/Projeto01.jpeg';
+import Proj2 from '../assets/Projeto02.jpeg';
+import Proj3 from '../assets/Projeto03.jpeg';
+import Proj4 from '../assets/Projeto04.jpeg';
+import Proj5 from '../assets/Projeto05.jpeg'; 
+import Proj6 from '../assets/Projeto06.jpeg';
+import Proj7 from '../assets/Projeto07.jpeg';
+import Proj8 from '../assets/Projeto08.jpeg';
+import Proj9 from '../assets/Projeto09.jpeg';
+import Proj10 from '../assets/Projeto10.jpeg';
+import Proj11 from '../assets/Projeto11.jpeg';
+import Proj12 from '../assets/Projeto12.jpeg';
+import Proj13 from '../assets/Projeto13.jpeg';
+import Proj14 from '../assets/Projeto14.jpeg';
+import Proj15 from '../assets/Projeto15.jpeg';
+import Proj16 from '../assets/Projeto16.jpeg';
+import Proj17 from '../assets/Projeto17.jpeg';
+import Proj18 from '../assets/Projeto18.jpeg';
+import Proj19 from '../assets/Projeto19.jpeg';
+import Proj20 from '../assets/Projeto20.jpeg';
+import Proj21 from '../assets/Projeto21.jpeg';
+import Proj22 from '../assets/Projeto22.jpeg';
+import Proj23 from '../assets/Projeto23.jpeg';
+import Proj24 from '../assets/Projeto24.jpeg';
 
 interface Project {
   id: number;
@@ -35,19 +48,32 @@ export default function Projects() {
 
   useEffect(() => { document.body.style.overflow = selectedProject ? 'hidden' : 'auto'; }, [selectedProject]);
 
-  // Array com os seus 11 projetos. Depois pode alterar os títulos reais!
+  // Array com os 24 projetos mapeados
   const availableProjects: Project[] = [
-    { id: 1, title: "Projeto 01", style: "Neo Japanese", img: Proj1, description: "Projeto autoral disponível para tatuar." },
-    { id: 2, title: "Projeto 02", style: "Illustrative", img: Proj2, description: "Projeto autoral disponível para tatuar." },
-    { id: 3, title: "Projeto 03", style: "Neo Japanese", img: Proj3, description: "Projeto autoral disponível para tatuar." },
-    { id: 4, title: "Projeto 04", style: "Illustrative", img: Proj4, description: "Projeto autoral disponível para tatuar." },
-    { id: 5, title: "Projeto 05", style: "Neo Japanese", img: Proj5, description: "Projeto autoral disponível para tatuar." },
-    { id: 6, title: "Projeto 06", style: "Illustrative", img: Proj6, description: "Projeto autoral disponível para tatuar." },
-    { id: 7, title: "Projeto 07", style: "Neo Japanese", img: Proj7, description: "Projeto autoral disponível para tatuar." },
-    { id: 8, title: "Projeto 08", style: "Illustrative", img: Proj8, description: "Projeto autoral disponível para tatuar." },
-    { id: 9, title: "Projeto 09", style: "Neo Japanese", img: Proj9, description: "Projeto autoral disponível para tatuar." },
-    { id: 10, title: "Projeto 10", style: "Illustrative", img: Proj10, description: "Projeto autoral disponível para tatuar." },
-    { id: 11, title: "Projeto 11", style: "Neo Japanese", img: Proj11, description: "Projeto autoral disponível para tatuar." },
+    { id: 1, title: "Projeto 01", style: "Disponível", img: Proj1, description: "Projeto autoral disponível para tatuar." },
+    { id: 2, title: "Projeto 02", style: "Disponível", img: Proj2, description: "Projeto autoral disponível para tatuar." },
+    { id: 3, title: "Projeto 03", style: "Disponível", img: Proj3, description: "Projeto autoral disponível para tatuar." },
+    { id: 4, title: "Projeto 04", style: "Disponível", img: Proj4, description: "Projeto autoral disponível para tatuar." },
+    { id: 5, title: "Projeto 05", style: "Disponível", img: Proj5, description: "Projeto autoral disponível para tatuar." },
+    { id: 6, title: "Projeto 06", style: "Disponível", img: Proj6, description: "Projeto autoral disponível para tatuar." },
+    { id: 7, title: "Projeto 07", style: "Disponível", img: Proj7, description: "Projeto autoral disponível para tatuar." },
+    { id: 8, title: "Projeto 08", style: "Disponível", img: Proj8, description: "Projeto autoral disponível para tatuar." },
+    { id: 9, title: "Projeto 09", style: "Disponível", img: Proj9, description: "Projeto autoral disponível para tatuar." },
+    { id: 10, title: "Projeto 10", style: "Disponível", img: Proj10, description: "Projeto autoral disponível para tatuar." },
+    { id: 11, title: "Projeto 11", style: "Disponível", img: Proj11, description: "Projeto autoral disponível para tatuar." },
+    { id: 12, title: "Projeto 12", style: "Disponível", img: Proj12, description: "Projeto autoral disponível para tatuar." },
+    { id: 13, title: "Projeto 13", style: "Disponível", img: Proj13, description: "Projeto autoral disponível para tatuar." },
+    { id: 14, title: "Projeto 14", style: "Disponível", img: Proj14, description: "Projeto autoral disponível para tatuar." },
+    { id: 15, title: "Projeto 15", style: "Disponível", img: Proj15, description: "Projeto autoral disponível para tatuar." },
+    { id: 16, title: "Projeto 16", style: "Disponível", img: Proj16, description: "Projeto autoral disponível para tatuar." },
+    { id: 17, title: "Projeto 17", style: "Disponível", img: Proj17, description: "Projeto autoral disponível para tatuar." },
+    { id: 18, title: "Projeto 18", style: "Disponível", img: Proj18, description: "Projeto autoral disponível para tatuar." },
+    { id: 19, title: "Projeto 19", style: "Disponível", img: Proj19, description: "Projeto autoral disponível para tatuar." },
+    { id: 20, title: "Projeto 20", style: "Disponível", img: Proj20, description: "Projeto autoral disponível para tatuar." },
+    { id: 21, title: "Projeto 21", style: "Disponível", img: Proj21, description: "Projeto autoral disponível para tatuar." },
+    { id: 22, title: "Projeto 22", style: "Disponível", img: Proj22, description: "Projeto autoral disponível para tatuar." },
+    { id: 23, title: "Projeto 23", style: "Disponível", img: Proj23, description: "Projeto autoral disponível para tatuar." },
+    { id: 24, title: "Projeto 24", style: "Disponível", img: Proj24, description: "Projeto autoral disponível para tatuar." },
   ];
 
   return (
@@ -60,7 +86,6 @@ export default function Projects() {
         </p>
       </div>
 
-      {/* GRID ALTERADO: grid-cols-2 garante 2 fotos por linha no telemóvel */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
         {availableProjects.map((project) => (
           <motion.div
@@ -71,7 +96,6 @@ export default function Projects() {
           >
             <img src={project.img} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
             
-            {/* O padding (p-4 md:p-8) e o texto são responsivos para não ficarem gigantes nas 2 colunas do telemóvel */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4 md:p-8">
               <span className="text-neutral-400 text-[10px] md:text-xs tracking-widest uppercase mb-1 md:mb-2">{project.style}</span>
               <span className="text-white text-sm md:text-xl font-serif">{project.title}</span>
@@ -80,7 +104,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* LIGHTBOX (MODAL QUE ABRE AO CLICAR NA FOTO) */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div

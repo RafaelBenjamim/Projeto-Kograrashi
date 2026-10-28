@@ -5,12 +5,24 @@ export default function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Sempre que a rota (pathname) mudar, rola suavemente para o topo
+    // 1. Rola para o topo suavemente
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'instant' // Usamos 'instant' para não brigar com a animação do Framer Motion
+      behavior: 'instant'
     });
+
+    // 2. SEO: Altera o título da aba do navegador dinamicamente
+    const titulos: Record<string, string> = {
+      '/': 'Kogarashi Studio | Tatuagem Neo Japanese em Uberlândia',
+      '/projetos': 'Projetos Disponíveis | Kogarashi Studio',
+      '/artista': 'O Artista | Kogarashi Studio',
+      '/contato': 'Agendamento & Local | Kogarashi Studio'
+    };
+
+    // Aplica o título correspondente à rota atual
+    document.title = titulos[pathname] || 'Kogarashi Studio';
+    
   }, [pathname]);
 
   return null;
